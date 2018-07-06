@@ -7,7 +7,7 @@
     <string name="login_btn_hint">INGIA</string>
     <string name="firstname_hint">Jina la kwanza</string>
     <string name="last_name_hint">Jina la familia</string>
-    <string name="email_hint">Email</string>
+    <string name="email_hint">Barua Pepe</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -58,7 +58,7 @@
 
     <string name="workout_exercie_name">Jina la Zoezi</string>
     <string name="workout_btnDate_cont_desc">date_btn_click</string>
-    <string name="workout_gym_location">Pahali pa Mazoezi</string>
+    <string name="workout_gym_location">Maeneo</string>
     <string name="workout_reps">marudio</string>
     <string name="workout_sets">seti</string>
     <string name="workout_btn_add_workout">Ongeza Adaji</string>
@@ -98,6 +98,10 @@
     <string name="workout_fragment">Mazoezi</string>
     <string name="workoutview_date">TAREHE :</string>
     <string name="lworkoutview_location">ENEO :</string>
+    <string name="close">Wazi :</string>
+    <string name="open">Kufungwa :</string>
+    <string name="workout_deleted">Zoezi limefutwa</string>
+    <string name="show_password">Show Password</string>
 
 
     <string-array name="ExcerciseName">

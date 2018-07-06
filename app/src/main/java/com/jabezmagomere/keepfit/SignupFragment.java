@@ -1,9 +1,14 @@
 package com.jabezmagomere.keepfit;
 
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
@@ -29,18 +34,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 import es.dmoral.toasty.Toasty;
+import spencerstudios.com.bungeelib.Bungee;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SignupFragment extends Fragment {
+public class SignupFragment extends DialogFragment {
     private String FirstName, LastName, UserName, Email, Password;
     private TextInputEditText etFirstName,etUserName, etLastName,etEmail,etPassword,etConfirmPassword;
     private TextInputLayout layout_firstName, layout_lastName, layout_UserName,layout_Email, layout_Password, layoutConfirmPassword;
     public static final String URL="https://sleepy-beyond-36756.herokuapp.com/api/Register";
     RequestQueue requestQueue;
     Button btnSignUp;
+    private ProgressDialog progressDialog;
 
 
     public SignupFragment() {
@@ -67,11 +74,16 @@ public class SignupFragment extends Fragment {
         layoutConfirmPassword=(TextInputLayout)view.findViewById(R.id.layout_confirmPassword);
         requestQueue= Volley.newRequestQueue(getContext());
         btnSignUp=(Button)view.findViewById(R.id.btnSignUp);
+        progressDialog=new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setTitle("Registering....");
+        progressDialog.setIndeterminate(true);
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressDialog.show();
                 if(validateName(etFirstName,layout_firstName)&&validateName(etLastName,layout_lastName) &&
-                        validateName(etUserName,layout_UserName)&&validateEmail(etEmail,layout_Email)&&validatePassword(etPassword,layout_Password)){
+                        validateName(etUserName,layout_UserName)&&validateEmail(etEmail,layout_Email)&&validatePassword(etPassword,layout_Password)&&validatePassword(etConfirmPassword,layoutConfirmPassword)&& checkMatchPassword()){
                     FirstName=etFirstName.getText().toString();
                     LastName=etLastName.getText().toString();
                     UserName=etUserName.getText().toString();
@@ -79,6 +91,10 @@ public class SignupFragment extends Fragment {
                     Password=etPassword.getText().toString();
                         Register();
                 }
+                if(progressDialog!=null){
+                    progressDialog.dismiss();
+                }
+
 
             }
         });
@@ -86,31 +102,52 @@ public class SignupFragment extends Fragment {
 
         return view;
     }
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        progressDialog=new ProgressDialog(getContext());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setTitle("Authenticating....");
+        progressDialog.setIndeterminate(true);
+        return progressDialog;
+    }
     public boolean validateName(TextInputEditText textInputEditText, TextInputLayout textInputLayout){
+        boolean status=true;
         if(TextUtils.isEmpty(textInputEditText.getText().toString())){
             textInputLayout.setError(getResources().getString(R.string.signup_name_required_error));
+            status=false;
         }else{
             textInputLayout.setErrorEnabled(false);
         }
-        return true;
+        return status;
     }
     private boolean validatePassword(TextInputEditText textInputEditText, TextInputLayout passwordLayout){
+        boolean status=true;
         if(TextUtils.isEmpty(textInputEditText.getText().toString()) || textInputEditText.getText().toString().length()<6 ){
             passwordLayout.setError(getResources().getString(R.string.signup_invalid_password_error));
+            status=false;
         }
-        if(!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())){
-            passwordLayout.setError(getResources().getString(R.string.password_match_error));
-        }
-        return true;
+        return status;
     }
     public boolean validateEmail(TextInputEditText textInputEditText,TextInputLayout textInputLayout){
+        boolean status=true;
         if(!TextUtils.isEmpty(textInputEditText.getText())&& Patterns.EMAIL_ADDRESS.matcher(textInputEditText.getText().toString()).matches()){
             textInputLayout.setErrorEnabled(false);
-            return true;
         }else{
+            status=false;
             textInputLayout.setError(getResources().getString(R.string.signup_invalid_email_error));
         }
-        return false;
+        return status;
+    }
+    public boolean checkMatchPassword(){
+        boolean status=true;
+        if(!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
+            status = false;
+            layout_Password.setError(getResources().getString(R.string.password_match_error));
+            layoutConfirmPassword.setError(getResources().getString(R.string.password_match_error));
+        }
+        return status;
+
     }
     public void Register(){
         HashMap<String,String> params=new HashMap<>();
@@ -123,6 +160,9 @@ public class SignupFragment extends Fragment {
             @Override
             public void onResponse(JSONObject response) {
                 Toasty.success(getContext(),getResources().getString(R.string.account_created_message), Toast.LENGTH_LONG,true).show();
+                Intent intent=new Intent(getContext(),LoginRegHost.class);
+                startActivity(intent);
+                Bungee.swipeRight(getContext());
 
             }
         }, new Response.ErrorListener() {
@@ -152,6 +192,10 @@ public class SignupFragment extends Fragment {
             }
         };
         requestQueue.add(jsonObjectRequest);
+        if(progressDialog!=null && progressDialog.isShowing()){
+            progressDialog.dismiss();
+        }
+
 
     }
 

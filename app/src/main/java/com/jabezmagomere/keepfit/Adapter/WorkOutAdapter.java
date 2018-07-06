@@ -113,7 +113,7 @@ public class WorkOutAdapter extends RecyclerView.Adapter<WorkOutAdapter.MyViewHo
                                                 progressDialog.dismiss();
                                             }
                                             removeAt(position);
-                                            Toasty.success(view.getContext(),res, Toast.LENGTH_SHORT,true).show();
+                                            Toasty.success(view.getContext(),view.getResources().getString(R.string.workout_deleted), Toast.LENGTH_SHORT,true).show();
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }

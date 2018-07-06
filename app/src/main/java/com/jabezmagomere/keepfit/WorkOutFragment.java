@@ -260,9 +260,11 @@ public class WorkOutFragment extends Fragment {
     DatePickerDialog.OnDateSetListener onDateSetListener=new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-            String date=String.valueOf(year)+"-"+String.valueOf(month)+"-"+String.valueOf(day);
-            tvWorkOutDate.setText(date);
+            int n_month=month+1;
+            String date=String.valueOf(year)+"-"+String.valueOf(n_month)+"-"+String.valueOf(day);
             workout.put("Date",date);
+            tvWorkOutDate.setText(date);
+
         }
     };
     public void displayWorkOuts() {
@@ -339,6 +341,7 @@ public class WorkOutFragment extends Fragment {
     }
     public void AddWorkOut(){
         Log.d("Work Out Data",workout.toString());
+        Log.d("Work Out Data",user_id);
         HashMap<String,String> params=new HashMap<String, String>();
         params.put("user_id",user_id);
         params.put("date",workout.get("Date"));
@@ -380,6 +383,7 @@ public class WorkOutFragment extends Fragment {
            public Map<String, String> getHeaders() throws AuthFailureError {
                HashMap<String,String> headers=new HashMap<>();
                headers.put("Content-Type","application/json");
+               headers.put("Authorization","Bearer"+" "+token);
                return headers;
            }
        };

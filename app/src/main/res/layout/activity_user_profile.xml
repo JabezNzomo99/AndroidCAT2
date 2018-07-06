@@ -231,7 +231,8 @@
                            android:text="@string/userprofile_male"
                            android:textSize="16sp"
                            android:textColor="@color/card_backgroundColor"
-                           android:fontFamily="@font/karla"/>
+                           android:fontFamily="@font/karla"
+                           android:onClick="onRadioButtonClicked"/>
 
                        <RadioButton
                            android:id="@+id/radio_female"
@@ -240,7 +241,8 @@
                            android:text="@string/userprofile_female"
                            android:textSize="16sp"
                            android:textColor="@color/card_backgroundColor"
-                           android:fontFamily="@font/karla"/>
+                           android:fontFamily="@font/karla"
+                           android:onClick="onRadioButtonClicked"/>
                    </RadioGroup>
 
 

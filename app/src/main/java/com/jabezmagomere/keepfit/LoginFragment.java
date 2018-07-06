@@ -2,16 +2,19 @@ package com.jabezmagomere.keepfit;
 
 
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
@@ -49,7 +52,7 @@ import spencerstudios.com.bungeelib.Bungee;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends DialogFragment {
     private TextInputEditText etUserName,etPassword;
     private TextInputLayout usernameLayout, passwordLayout;
     private String UserName, Password;
@@ -72,12 +75,12 @@ public class LoginFragment extends Fragment {
 
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view=inflater.inflate(R.layout.fragment_login, container, false);
+        setCancelable(false);
         etUserName=(TextInputEditText) view.findViewById(R.id.etUserName);
         etPassword=(TextInputEditText) view.findViewById(R.id.etPassword);
         btnLogin=(Button) view.findViewById(R.id.btnLogin);
@@ -85,16 +88,24 @@ public class LoginFragment extends Fragment {
         usernameLayout=(TextInputLayout)view.findViewById(R.id.usernameInputLayout);
         passwordLayout=(TextInputLayout)view.findViewById(R.id.passwordInputLayout);
         requestQueue= Volley.newRequestQueue(getContext());
+        progressDialog=new ProgressDialog(getContext(),getTheme());
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setTitle("Authenticating....");
+        progressDialog.setIndeterminate(true);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                btnLogin.setVisibility(View.INVISIBLE);
-                progressDialog=DialogUtils.showProgressDialog(v.getContext(),getResources().getString(R.string.logging_in_status));
+                btnLogin.setEnabled(false);
+                progressDialog.show();
                 if(validateUserName(etUserName) && validatePassword(etPassword)){
                     UserName=etUserName.getText().toString();
                     Password=etPassword.getText().toString();
                     login();
                 }
+                if(progressDialog!=null && progressDialog.isShowing()){
+                    progressDialog.dismiss();
+                }
+                btnLogin.setEnabled(true);
 
             }
 
@@ -102,6 +113,7 @@ public class LoginFragment extends Fragment {
 
         return view;
     }
+
     private boolean validateUserName(TextInputEditText textInputEditText){
         if(TextUtils.isEmpty(textInputEditText.getText())){
             usernameLayout.setError(getResources().getString(R.string.username_required_error));

@@ -99,6 +99,10 @@
     <string name="workout_fragment">Work Out</string>
     <string name="workoutview_date">DATE :</string>
     <string name="lworkoutview_location">LOCATION :</string>
+    <string name="close">CLOSE :</string>
+    <string name="open">OPEN :</string>
+    <string name="workout_deleted">Work Out Deleted</string>
+    <string name="show_password">Show Password</string>
 
 
     <string-array name="ExcerciseName">

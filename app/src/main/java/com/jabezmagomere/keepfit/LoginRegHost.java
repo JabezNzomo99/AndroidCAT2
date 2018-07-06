@@ -37,7 +37,7 @@ public class LoginRegHost extends AppCompatActivity {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
-            Toasty.success(LoginRegHost.this,"Online", Toast.LENGTH_LONG,true).show();
+
         } else {
             // notify user you are not online
             Toasty.warning(LoginRegHost.this,"Check Network Status", Toast.LENGTH_LONG,true).show();

@@ -125,6 +125,19 @@ public class UserProfile extends AppCompatActivity {
         super.onBackPressed();
         Bungee.swipeRight(UserProfile.this);
     }
+    public void onRadioButtonClicked(View view){
+        boolean checked=((RadioButton) view).isChecked();
+        switch (view.getId()){
+            case R.id.radio_male:
+                if(checked)
+                    Gender="Male";
+                break;
+            case R.id.radio_female:
+                if(checked)
+                    Gender="Female";
+                break;
+        }
+    }
 
 
 
@@ -201,10 +214,9 @@ public class UserProfile extends AppCompatActivity {
                     String Weight = response.getString("Weight");
                     String Targetweight = response.getString("TargetWeight");
                     String Phone=response.getString("PhoneNumber");
-
+                    profile_fname.setText(FirstName);
                     if(!FirstName.equals("null")){
                         profile_fname.setText(FirstName);
-
                     }else{
                         profile_fname.setText("");
                     }
@@ -239,9 +251,9 @@ public class UserProfile extends AppCompatActivity {
                         numberPicker.setValue(10);
                     }if(!Gender.equals("null")){
                         if(Gender.equals("Male")){
-                           radio_male.setEnabled(true);
+                           radio_male.setChecked(true);
                         }else{
-                            radio_female.setEnabled(true);
+                            radio_female.setChecked(true);
                         }
                     }else{
 
@@ -291,11 +303,6 @@ public class UserProfile extends AppCompatActivity {
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setMessage(getResources().getString(R.string.userprofile_update_status));
         progressDialog.show();
-        if(radio_male.isSelected()){
-            Gender="Male";
-        }else{
-            Gender="Female";
-        }
         final String fname=profile_fname.getText().toString();
         final String lname=profile_lname.getText().toString();
         final String uname=profile_uname.getText().toString();

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         final ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         final NetworkInfo activeNetwork = conMgr.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
-            Toasty.success(MainActivity.this,"Online", Toast.LENGTH_LONG,true).show();
+
         } else {
             // notify user you are not online
             Toasty.warning(MainActivity.this,"Check Network Status", Toast.LENGTH_LONG,true).show();
