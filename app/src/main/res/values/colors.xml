@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E0E0E0</color>
+    <color name="colorPrimaryDark">#DADCE0</color>
+    <color name="colorAccent">#6200EE</color>
+    <color name="white">#FFFFFF</color>
+    <color name="loginPageBackgroundColor">#FFFFFF</color>
+    <color name="productGridBackgroundColor">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="tab_indicator">#ee918d</color>
+    <color name="card_backgroundColor">#252839</color>
+    <color name="info_window_background">#046C8F</color>
+    <color name="info_background">#FFC304</color>
+    <color name="reps_color">#FFB838</color>
+    <color name="sets_color">#FF3800</color>
+    <color name="work_out_bkg">#FFFBCC</color>
+    <color name="card_new_bkg">#1F212C</color>
+    <color name="profile_bkg">#ecf0f1</color>
+</resources>

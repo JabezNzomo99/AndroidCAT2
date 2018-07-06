@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FCD670"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:orientation="horizontal">
+        <com.reginald.editspinner.EditSpinner
+            android:id="@+id/etExerciseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/workout_exercie_name"
+            android:drawableStart="@drawable/ic_fitness_center_black_24dp"
+            app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
+            app:dropDownDrawableSpacing="15dp"
+            app:dropDownDrawableWidth="25dp"
+            app:dropDownDrawableHeight="25dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_today_48dp"
+                android:background="#49BCAB"
+                android:contentDescription="@string/workout_btnDate_cont_desc"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etDateLayout"
+                android:clickable="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                >
+                <TextView
+                    android:id="@+id/tvWorkOutDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workout_date"
+                    android:fontFamily="@font/karla"
+                    android:textColor="@color/card_backgroundColor"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <!--<android.support.design.widget.TextInputEditText-->
+            <!--android:id="@+id/etDate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Date"-->
+            <!--android:drawableLeft="@drawable/ic_today_black_24dp"-->
+            <!--android:clickable="true"-->
+            <!--android:editable="false"-->
+            <!--/>-->
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <com.reginald.editspinner.EditSpinner
+            android:id="@+id/GymLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/workout_gym_location"
+            app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
+            app:dropDownDrawableSpacing="15dp"
+            app:dropDownDrawableWidth="25dp"
+            app:dropDownDrawableHeight="25dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/workout_reps"
+            android:fontFamily="@font/karla"
+            android:textSize="18sp"
+            android:textColor="@color/card_backgroundColor"
+            />
+
+        <SeekBar
+            android:layout_marginTop="5dp"
+            android:id="@+id/reps_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:thumb="@drawable/ic_fitness_center_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRepsCount"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:fontFamily="@font/karla"
+            android:textColor="@color/colorAccent"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/workout_sets"
+            android:fontFamily="@font/karla"
+            android:textSize="18sp"
+            android:textColor="@color/card_backgroundColor"
+            />
+
+        <SeekBar
+            android:layout_marginTop="5dp"
+            android:id="@+id/sets_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:thumb="@drawable/ic_fitness_center_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/tvSetsCount"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:fontFamily="@font/karla"
+            android:textColor="@color/colorAccent"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.button.MaterialButton
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnAddWorkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/workout_btn_add_workout"
+        android:fontFamily="@font/karla"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#49BCAB"
+        android:textColor="@color/card_backgroundColor"/>
+
+
+</LinearLayout>

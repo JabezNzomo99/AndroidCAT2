@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name_hint">Jina la Mtumiaji</string>
+    <string name="password_hint">Nenosiri</string>
+    <string name="login_btn_hint">INGIA</string>
+    <string name="firstname_hint">Jina la kwanza</string>
+    <string name="last_name_hint">Jina la familia</string>
+    <string name="email_hint">Email</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="dial">PIGA SIMU</string>
+    <string name="e_mail">BARUA PEPE</string>
+    <string name="google_maps_key">AIzaSyAr_MhDWrqiRSGbDrZ1Wbc69efcEBmQ75Y</string>
+    <string name="instructos_phone_logo">instructos_phone_logo</string>
+    <string name="profile_first_name">Jina la kwanza</string>
+    <string name="profile_last_name">Jina la familia</string>
+    <string name="profile_user_name">Jina la Mtumiaji</string>
+    <string name="profileEmail">Barua pepe</string>
+    <string name="profile_home">Nyumbani</string>
+    <string name="prof_phone_number">Nambari ya Simu</string>
+    <string name="prof_age">Umri</string>
+    <string name="current_weight">HUDUMA YAKATI</string>
+    <string name="_0">0</string>
+    <string name="profile_age">UMRI</string>
+    <string name="image_button_to_delete_workout">Image Button to delete WorkOut</string>
+    <string name="admob_id">ca-app-pub-3955141891671713~9903268778</string>
+    <string name="interstitial_full_screen">ca-app-pub-3955141891671713/9492205231</string>
+
+    <string name="login_msg_success">Ingiza Mafanikio</string>
+    <string name="password_short_error">Neno la siri ni fupi mno</string>
+    <string name="password_required_error">Neno la siri linahitajika</string>
+    <string name="username_required_error">Jina la mtumiaji linahitajika</string>
+    <string name="logging_in_status">Ingia katika ...</string>
+    <string name="login_failed">Imeshindikana kujiandikisha kuingia</string>
+    <string name="failed_to_load_details">Imeshindwa kupakia maelezo ya mtumiaji</string>
+
+    <string name="sign_up">SAINI</string>
+    <string name="confirm_password">Thibitisha nenosiri</string>
+    <string name="signup_first_name">Jina la kwanza</string>
+    <string name="last_name_signup_hint">Jina la familia</string>
+    <string name="signup_name_required_error">Jina linahitajika</string>
+    <string name="signup_invalid_password_error">Nywila isiyo sahihi</string>
+    <string name="signup_invalid_email_error">Barua pepe batili</string>
+    <string name="account_created_message">Akaunti Imeundwa</string>
+    <string name="error_occured">Hitilafu imetokea</string>
+    <string name="password_match_error">Nenosiri Linapaswa Kufanana</string>
+
+    <string name="workout_exercie_name">Jina la Zoezi</string>
+    <string name="workout_btnDate_cont_desc">date_btn_click</string>
+    <string name="workout_gym_location">Pahali pa Mazoezi</string>
+    <string name="workout_reps">marudio</string>
+    <string name="workout_sets">seti</string>
+    <string name="workout_btn_add_workout">Ongeza Adaji</string>
+    <string name="workout_date">TAREHE</string>
+    <string name="workout_saved_message">Adaji Imehifadhiwa</string>
+    <string name="workout_progress_saving">Inahifadhi ....</string>
+    <string name="workout_date_picker">Kalenda</string>
+    <string name="instructor_text">UJUMBE</string>
+    <string name="gym_view_book">WEKA</string>
+    <string name="userprofile_btnsave">HIFADHI</string>
+    <string name="userprofile_targetweight">Lengo La Uzito</string>
+    <string name="userprofile_male">Kiume</string>
+    <string name="userprofile_female">Kike</string>
+    <string name="drawer_title_user_profile">Profaili ya Mtumiaji</string>
+    <string name="advertisements">Matangazo</string>
+    <string name="about">Maelezeo</string>
+    <string name="about_text">Endelea Fit ni programu ya fitness inayokuwezesha kupata gyms kote eneo lako, ufuatiliaji wa adaji yako na wasiliana na waalimu wa mazoezi ya kitaaluma.</string>
+    <string name="version_1_0_0">Toleo 1.0.0</string>
+    <string name="advert_info">Endelea Fit ni programu isiyo ya faida, Bonyeza kifungo chini ili uunga mkono Android Maestro..</string>
+    <string name="refresh_advert">REJESHA MATANGAZO</string>
+
+    <string name="retrieval_success">Ufanikio wa Rudisha</string>
+    <string name="userprofile_saved_success">Profaili ya Mtumiaji Imehifadhiwa</string>
+    <string name="userprofile_update_status">Inasasisha ...</string>
+    <string name="alert_dialog_stmt">Una uhakika unataka kufuta kazi hii nje?</string>
+    <string name="delete_status">Inafuta ...</string>
+    <string name="yes">NDIYO</string>
+    <string name="no">Hapana</string>
+    <string name="preferences">Mapendekezo</string>
+    <string name="select_your_preferred_language">Chagua lugha yako iliyopendekezwa</string>
+    <string name="english">ENGLISH</string>
+    <string name="kiswahili">KISWAHILI</string>
+    <string name="main_login">INGIA</string>
+    <string name="main_signup">JIANDIKISHE</string>
+    <string name="gym_fragment">Pahali pa Mazoezi</string>
+    <string name="instructors_fragment">Wakufunzi</string>
+    <string name="workout_fragment">Mazoezi</string>
+    <string name="workoutview_date">TAREHE :</string>
+    <string name="lworkoutview_location">ENEO :</string>
+
+
+    <string-array name="ExcerciseName">
+        <item>Press-Ups</item>
+        <item>Squats</item>
+        <item>Pull-Ups</item>
+        <item>Sit-Ups</item>
+        <item>Lunge</item>
+        <item>Plank</item>
+    </string-array>
+
+    <string-array name="Gyms">
+        <item>Windsor Country Gym</item>
+        <item>Strathmore Sports Gym</item>
+        <item>Great Body Gym</item>
+        <item>Kings Gym and Spa</item>
+        <item>Samto Fitness Centre</item>
+        <item>Safara Gym</item>
+    </string-array>
+</resources>

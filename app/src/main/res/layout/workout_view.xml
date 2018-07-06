@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="@color/work_out_bkg"
+        app:cardCornerRadius="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ivWorkOut"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@drawable/notepad"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_circle_background_color="@color/colorWhite"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tvExcercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lora_bold"
+                    android:textSize="24sp"
+                    tools:text="SQUATS"
+                    android:textColor="@color/card_backgroundColor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/karla"
+                        android:textSize="18sp"
+                        tools:text="DATE :"
+                        android:text="@string/workoutview_date"
+                        android:drawableLeft="@drawable/ic_today_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/karla"
+                        android:textSize="16sp"
+                        tools:text="23/09/2018"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/karla"
+                        android:textSize="18sp"
+                        tools:text="LOCATION :"
+                        android:text="@string/lworkoutview_location"
+                        android:drawableLeft="@drawable/ic_place_black_24dp"/>
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/karla"
+                        android:textSize="16sp"
+                        tools:text="Windsor Gym Club"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/tvReps"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:background="@color/reps_color"
+                    tools:text="REPS:"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/karla"
+                    android:textColor="@color/card_backgroundColor"
+                    android:drawableTop="@drawable/ic_repeat_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tvSets"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:background="@color/sets_color"
+                    tools:text="SETS:"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/karla"
+                    android:textColor="@color/card_backgroundColor"
+                    android:drawableTop="@drawable/ic_fitness_center_black_24dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    android:background="@color/work_out_bkg"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/image_button_to_delete_workout"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+
+</LinearLayout>
