@@ -45,9 +45,9 @@ A user can be able to view a list of gym instructors and contact them as well.
 ### User Profile
 A user can be able to view and update their user profile.
 
- <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/>  
- <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623.png width="300"/> 
- 	
+ <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/> <img src="	https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623.png" width="300"/>
+
+ 
 
 
 
