@@ -19,9 +19,22 @@ The user is presented with a login screen when the application loads, a register
 After being successfuly authenticated the user is directed to the Home Page, which is the Main Activity in our application.
 
 ## Save and keep track of workout sessions.
+
+### View work out sessions.
 A user can be able to view all their saved work out sessions.
 
 <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151850.png" width="300"/>
+
+### Add Work Out Sessions
+A user can be able to save an new work out session
+
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (2).gif" width="300"/>
+
+### Delete work out sessions
+A user can be able to delete existing work out sessions.
+
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151910.png" width="300"/>
+
 
 
 
