@@ -22,8 +22,13 @@ The user is presented with a login screen when the application loads, a register
 ### Home Page
 After being successfuly authenticated the user is directed to the Home Page, which is the Main Activity in our application.
 
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (6).gif" width="300"/>
+
 ## Gyms
 A user can be able to view nearby gyms to their location and contact the gym.
+
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (5).gif	" width="300"/>
+
 ## Save and keep track of workout sessions.
 
 ### View work out sessions.
@@ -49,7 +54,7 @@ A user can be able to view a list of gym instructors and contact them as well.
 ### User Profile
 A user can be able to view and update their user profile.
 
-<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/> <img src="	https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623.png" width="300"/>
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/> <img src="	https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623 (1).png" width="300"/>
 
 ### App Localization
 The application supports two languages; English and Kiswahili. The user can be able to interact with the appliation in their prefered language.
