@@ -35,7 +35,10 @@ A user can be able to delete existing work out sessions.
 
 <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151910.png" width="300"/> <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (3).gif" width="300"/>
 
+## View Instructors
+A user can be able to view a list of gym instructors and contact them as well.
 
+ <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (4).gif" width="300"/>
 
 
 
