@@ -7,6 +7,7 @@ Keep Fit is a mobile based fitness application with the following functionalitie
 
 ### Splash Screen
 On opening the application the splash screen is displayed.
+
 <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/ezgif.com-video-to-gif (1).gif" width="300"/>
 
 ### Login and Signup Screen
@@ -17,6 +18,9 @@ The user is presented with a login screen when the application loads, a register
 ### Home Page
 After being successfuly authenticated the user is directed to the Home Page, which is the Main Activity in our application.
 
+## Save and keep track of workout sessions.
+A user can be able to view all their saved work out sessions.
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151850.png" width="300"/>
 
 
 
