@@ -5,6 +5,10 @@ Keep Fit is a mobile based fitness application with the following functionalitie
 - Displays a list of gym instructors and allows the user to book or contact an instructor.
 - Allows the user to save and keep track of their work out sessions. 
 
+### About Keep Fit
+
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151708.png" width="300"/>
+
 ### Splash Screen
 On opening the application the splash screen is displayed.
 
@@ -45,9 +49,13 @@ A user can be able to view a list of gym instructors and contact them as well.
 ### User Profile
 A user can be able to view and update their user profile.
 
- <img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/> <img src="	https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623.png" width="300"/>
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151604.png" width="300"/> <img src="	https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151623.png" width="300"/>
 
- 
+### App Localization
+The application supports two languages; English and Kiswahili. The user can be able to interact with the appliation in their prefered language.
+
+<img src="https://github.com/JabezNzomo99/KeepFit/blob/master/screenshots/Screenshot_20190104-151636.png" width="300"/>
+
 
 
 
